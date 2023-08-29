@@ -1,0 +1,478 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+ }
+
+
+html{
+   scroll-behavior: smooth;
+}
+
+body{
+   color: black;
+   font-size: small;
+}
+
+.body-1 {
+   background-color: #F5F5F5;
+ }
+
+
+.container{
+    padding : 10px 10%;
+
+}
+
+
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap:wrap ;
+
+}
+
+.logo{
+   width: 300px;
+}
+
+nav ul{
+    float: left;
+}
+nav ul li{
+    float: left;
+    position: relative;
+    list-style: none;
+    margin: 10px 20px; 
+}
+
+nav ul li a{
+   margin-top: 109px; 
+   color: black;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+
+nav ul li ul{
+   display: block;
+   position: absolute;
+   background: #080808;
+   list-style: none;
+   margin-top: 15px;
+   margin-left: -7px;
+
+}
+
+
+nav ul li a::after{
+   content: '';
+   width: 0;
+   height: 3px;
+   background: #ff004f ;
+   position: absolute;
+   left: 0;
+   bottom:  -6px;
+   transition: 0.5s;
+
+
+    
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+    
+}
+
+
+.header-text{
+   margin-top : 20%;
+   font-size: 30px;
+}
+
+.header-text h1{
+   margin-top : 20px;
+   font-size: 40px;
+}
+
+
+.header-text h1 span{
+   color: #ff004f;
+}
+
+.header-text p{
+   margin-top : 20px;
+   font-size: 20px;
+   font-weight: 100;
+}
+
+#about{
+   padding: 50px 0;
+   color: black;
+}
+
+.row{
+   display : flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.header-col-1{
+   margin-top: -50px;
+   flex-basis: 60%;
+}
+
+.header-col-2{
+   margin-top: -150px;
+}
+
+.profileimage1{
+   width: 350px;
+   height: auto;
+}
+.about-col-1{
+   flex-basis: 35%;
+}
+
+.about-col-1 img{
+   width: 80%;
+   height: auto;
+   border-radius: 15px;
+}
+
+.about-col-2 {
+   flex-basis: 60%;
+}
+
+.subtitle{
+   font-size: 60px;
+   font-weight: 600;
+   color: black
+}
+
+.text{
+   font-size: 15px;
+   font-weight: 100;
+   line-height: 30px;
+}
+
+.tab-titles{
+   display: flex;
+   margin: 20px 0 40px;
+}
+
+.tab-link{
+   margin-right: 50px;
+   font-size: 18px;
+   font-weight: 100;
+   cursor: pointer;
+   position: relative;
+
+}
+
+.tab-link::after{
+   content: '';
+   width: 0;
+   height: 3px;
+   background: #ff004f;
+   position: absolute;
+   left: 0;
+   bottom: -8px;
+   transition: 0.5s;
+}
+   
+.tab-link.active-link::after{
+   width: 50%;
+}
+
+.tab-contents{
+   display: none;
+}
+
+.tab-contents ul li{
+   padding: 10px 0;
+   font-size: 18px;
+   font-weight: 100;
+}
+
+.tab-contents ul li span{
+   color: #ff004f;
+   font-size: 18px;
+}
+
+.tab-contents.active-tab{
+   display: block;
+}
+
+
+.logo1{
+   width: 60px;
+   height: auto;
+   padding: 10px;
+   margin-top: 20px;
+}
+
+/*``````````````````````````Projects````````````````````````````````*/
+
+#projects {
+   padding: 30px 0;
+   color: black;
+}
+
+.projects-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjusted column width */
+   grid-gap: 40px;
+   margin-top: 50px;
+}
+
+
+.custom-link{
+   color :#ff004f;
+   text-decoration: none;
+   position: relative; /* Needed for absolute positioning */
+}
+.custom-link::before {
+   content: ''; /* Empty content for the pseudo-element */
+   width: 60%; /* Width of the line */
+   height: 2px; /* Height of the line */
+   background: #ff004f; /* Color of the line */
+   position: absolute; /* Absolute positioning relative to .custom-link */
+   left: 0;
+   bottom: -3px; /* Position it below the link text */
+   transform: scaleX(0); /* Initially hide the line */
+   transform-origin: left center; /* Set the transform origin */
+   transition: transform 0.3s ease; /* Transition effect for smooth appearance */
+ }
+ 
+ .custom-link:hover::before {
+   transform: scaleX(1); /* Show the line on hover */
+ }
+
+.custom-link:visited {
+   color: #ff004f;
+
+}
+.project-item {
+   
+   padding: 20px; /* Add padding to create space between the content and the border */
+   border-radius: 15px; /* Adjust border radius properties as needed */
+   width: 480px;
+}
+
+
+
+
+.project-item h2 {
+   margin-bottom: 10px; /* Add margin below the header */
+   color: #ff004f;
+}
+
+
+
+
+.project-item h4 {
+   color: #ff004f;  /* Add margin above the paragraph */
+}
+
+.project-image {
+   flex: 1;
+   display: block;
+   
+
+ }
+
+ .Projects{
+   width: 450px;
+   height: auto;
+   margin-bottom: 20px;
+   border-radius: 15px;
+}
+
+
+.content-wrapper {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .content-row {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin-bottom: -100px; /* Add space between rows */
+ }
+ .content-row1 {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 40px;
+   padding-right: 90px;
+   text-align: center;
+   margin-bottom: 10px; /* Add space between rows */
+ }
+
+ .content-row1 img{
+   margin-bottom: 10px;
+ }
+
+ .column {
+   flex: 1;
+   padding: 20px;
+ }
+ 
+ .column img {
+   max-width: 100%;
+   height: auto;
+ }
+ 
+ /* Add padding and center-align content within each .column */
+
+
+ .column:nth-child(1) h1{
+   margin: 0; /* Remove margin from the header */
+   padding-left: 70px;
+ }
+ 
+ .column:nth-child(1) ul{
+   padding-left: 70px; /* Add padding below the header */
+ }
+
+
+ 
+ 
+ /* Optional styling for headers and paragraphs */
+ h2, p {
+   margin: 0;
+ }
+ 
+
+ .Foodies{
+   padding: 20px 0;
+   color: black;
+   
+ }
+
+   .Foodies .text{
+      line-height: 30px;
+   }
+ 
+
+ .Findings{
+   padding: 50px ;  
+ }
+
+ .body-2 {
+   background-color: #F5F5F5;
+   color: #000000;
+   font-size: 15px;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .Foodies .header{
+   font-size: 20px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+ }
+
+ .Foodies .quote{
+   font-weight: 900;
+   font-size: 25px;
+ }
+
+ .custom-hr {
+   border: none; /* Remove the default border */
+   border-top: 2px solid #6e7f80; /* Set the desired thickness and color */
+   margin: 20px 0; /* Add margin for spacing */
+   margin-bottom: 55px;
+ }
+
+ .cover-image {
+   max-width: 100%; /* Set the maximum width to 100% of its container */
+   height: auto; /* Maintain the image's aspect ratio */
+   display: block; /* Remove any extra spacing below the image */
+   margin-top: 20px; /* Add margin to create spacing between the title and image */
+ }
+
+ .Foodies .image-style {
+   max-width: 80%; /* Set the maximum width of the image to 50% */
+   height: auto; /* Maintain the image's aspect ratio */
+ }
+ 
+
+ .Foodies .list{
+   padding: 20px 0;
+   margin-left: 20px;
+   font-size: 18px;
+   
+   
+ }
+
+.Foodies .list li{
+   margin-bottom: 12px;
+   line-height: 35px;
+}
+
+.Foodies .list span{
+   font-weight: 900;
+   color: #36454f;
+}
+
+.flier {
+   pointer-events: none;
+   transform: scaleX(-1);
+   margin-top: -75px;
+   
+ 
+}
+ 
+ .flier > * {
+   animation: fly 50s linear infinite;
+   pointer-events: none !important;
+   transform: translateX(-120%);
+   position: fixed;
+   animation-delay: 1s;
+ }
+
+ @keyframes fly {
+   0% {
+     transform: translateX(0px); /* Start position */
+   }
+ 
+   100% {
+     transform: translateX(-60vw); /* End position */
+   }
+ }
+ 
+ .Graph {
+   margin-top: -75px;
+   align-items: center;
+}
+
+.image-styles{
+   max-width: 100%;
+   align-items: center;
+   margin-bottom: -100px ;
+}
+
+.Foodies .imagefinalproducts{
+   max-width: 80%;
+   align-items: center;
+}
+
+.Foodies h6{
+   font-size: 15px;
+   color: #36454f;
+   margin-top: 45px;
+   margin-bottom: 5px;
+   
+}
+
+.Resume{
+   margin-top: 50px;
+   margin-left: 50px;
+   width: 90%;
+
+}
